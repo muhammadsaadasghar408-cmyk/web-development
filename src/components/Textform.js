@@ -16,7 +16,7 @@ export default function Textform(props) {
 
   const handleclearclick=()=>{
     // console.log("upercase was clicked");
-    let newtext = text.to
+    let newtext = " ";
     setText(newtext)
   }
 
@@ -32,18 +32,19 @@ export default function Textform(props) {
 
   return (
     <>
-    <div className="container">
+    <div className="container" >                  
       <h1>
         {props.heading} 
       </h1>
-      <div class="mb-3">
-        {/* <label for="mybox" class="form-label">  Example textarea </label> */}
+      <div className="mb-3">
+        {/* <label for="mybox" className="form-label">  Example textarea </label> */}
         <textarea
           className="form-control"
           value={text}
-          id="mybox"
           onChange={handleonchange}
-          rows="8"
+          rows="8" style={{ backgroundColor: props.mode === 'dark' ? '#a9b6c067' : 'white',
+    color: props.mode === 'dark' ? 'white' : 'black'}}
+          id="mybox"
         ></textarea>
       </div>
       <button className="btn btn-primary mx-1" onClick={handleupclick}> convert to uppercase </button>
@@ -56,7 +57,7 @@ export default function Textform(props) {
       <p>{text.split(" ").length} words and {text.length} characters</p>
       <p>{0.008 *text.split(" ").length} minutes read</p>
       <h2>preview</h2>
-      <p>{text}</p>
+      <p>{text.length>0?text:'enter something to preview it here'}</p>
     </div>
     </>
   );
