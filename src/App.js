@@ -16,6 +16,9 @@ setAlert({
   msg:massage,
   type:type
 })
+setTimeout(() => {
+  setAlert(null)
+}, 1500);
  
 }
 
@@ -42,7 +45,7 @@ setAlert({
 {/* <Navbar /> */}
 <Alert  alert={alert}/>
 <div className='container my-3'>
-<Textform heading="Enter the text to analyze below" mode={mode}
+<Textform heading="Enter the text to analyze below" mode={mode} showAlert={showAlert}
 />
 <About mode={mode} />
 
