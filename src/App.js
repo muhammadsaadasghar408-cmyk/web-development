@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 
 function App() { 
   const [mode, setMode] = useState ('light');
+  const [green, setGreenMode] = useState ('light');
   const [alert, setAlert] = useState (null);
 
 const showAlert=(massage,type)=>{
@@ -39,9 +40,26 @@ setTimeout(() => {
       showAlert("light mode has been enable","success");   
     }
   }
+  const greenMode= ()=>{
+    if (green=== 'light') {
+      setGreenMode('light');
+      // document.body.style.backgroundColor='dark';
+      
+         document.body.style.backgroundColor = 'green';  
+      document.body.style.color = 'white';   
+      showAlert("green mode has been enable","success");   
+    }
+    else{
+      setGreenMode('green');
+      // document.body.style.backgroundColor='white';
+      document.body.style.backgroundColor = 'white';    // white background
+      document.body.style.color = 'black'; 
+      showAlert("light mode has been enable","success");   
+    }
+  }
   return (
     <>
-<Navbar title="textuits2" abouttext="About us" mode={mode} toggleMode={toggleMode} />
+<Navbar title="textuits2" abouttext="About us" mode={mode} green={green} greenMode={greenMode} toggleMode={toggleMode} />
 {/* <Navbar /> */}
 <Alert  alert={alert}/>
 <div className='container my-3'>
