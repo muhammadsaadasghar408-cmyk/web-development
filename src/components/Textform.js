@@ -49,7 +49,7 @@ export default function Textform(props) {
     color: props.mode === 'dark' ? 'white' : 'black'}}
           id="mybox"
         ></textarea>
-      </div>
+      </div> 
       <button className="btn btn-primary mx-1" onClick={handleupclick}> convert to uppercase </button>
       <button className="btn btn-primary mx-1" onClick={handleloclick}> convert to lowercase </button>
       <button className="btn btn-primary mx-1" onClick={handleclearclick}> clear </button>
