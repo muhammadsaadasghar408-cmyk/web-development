@@ -1,21 +1,19 @@
 {
-    "homepage": "https://uhammadsaadasghar408-cmyk.github.io/web-development",
     "name": "textuits",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
         "bootstrap": "^5.3.8",
         "cra-template": "1.3.0",
-        "gh-pages": "^6.3.0",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
         "react-router-dom": "^7.9.5",
         "react-scripts": "5.0.1",
         "web-vitals": "^5.1.0"
     },
-     "scripts": {
-       "predeploy": "npm run build",
-       "deploy": "gh-pages -d build",
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
