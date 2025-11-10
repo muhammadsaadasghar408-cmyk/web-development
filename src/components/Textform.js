@@ -50,14 +50,14 @@ export default function Textform(props) {
           id="mybox"
         ></textarea>
       </div> 
-      <button className="btn btn-primary mx-1" onClick={handleupclick}> convert to uppercase </button>
-      <button className="btn btn-primary mx-1" onClick={handleloclick}> convert to lowercase </button>
-      <button className="btn btn-primary mx-1" onClick={handleclearclick}> clear </button>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleupclick}> convert to uppercase </button>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleloclick}> convert to lowercase </button>
+      <button className="btn btn-primary mx-1 my-1" onClick={handleclearclick}> clear </button>
       
     </div>
     <div className="container my-2">
       <h1>Your text summary</h1>
-      <p>{text.split(" ").length} words and {text.length} characters</p>
+      <p>{text.split(" ").filter((element)=>{ return element.length!==0}).length} words and {text.length} characters</p>
       <p>{0.008 *text.split(" ").length} minutes read</p>
       <h2>preview</h2>
       <p>{text.length>0?text:'enter something to preview it here'}</p>
