@@ -34,7 +34,7 @@ export default function About(props) {
     color: props.mode==='dark'?'white':'black',
     backgroundColor: props.mode==='dark'?'black':'white',
     border: '2px solid',
-    borderColor:  props.mode==='dark'?'white':'black'
+    borderColor: props.mode==='dark'?'dark':'white'
   }
   return (
     <div className="container" style={myStyle} >

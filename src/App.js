@@ -33,7 +33,7 @@ setTimeout(() => {
          document.body.style.backgroundColor = 'black';  
       document.body.style.color = 'white';   
       showAlert("dark mode has been enable","success");
-      document.title='textuits-Darkmode';   
+      // document.title='textuits-Darkmode';   
     }
     else{
       setMode('light');
@@ -41,7 +41,7 @@ setTimeout(() => {
       document.body.style.backgroundColor = 'white';    // white background
       document.body.style.color = 'black'; 
       showAlert("light mode has been enable","success");   
-      document.title='textuits-lightmode';   
+      // document.title='textuits-lightmode';   
     }
   }
   const greenMode= ()=>{
@@ -52,7 +52,7 @@ setTimeout(() => {
       document.body.style.backgroundColor = 'green';  
       document.body.style.color = 'white';   
       showAlert("green mode has been enable","success");   
-      document.title='textuits-greenmode';   
+      // document.title='textuits-greenmode';   
     }
     else{
       setGreenMode('light');
@@ -60,7 +60,7 @@ setTimeout(() => {
       document.body.style.backgroundColor = 'white';    // white background
       document.body.style.color = 'black'; 
       showAlert("light mode has been enable","success");   
-      document.title='textuits-lightmode';   
+      // document.title='textuits-lightmode';   
     }
   }
   return (
@@ -73,7 +73,7 @@ setTimeout(() => {
   {/* <Textform heading="Enter the text to analyze below" mode={mode} showAlert={showAlert}/> */}
   {/* <About mode={mode} /> */}
      <Routes>
-          <Route path="/" element={<Textform heading="Enter the text to analyze below" mode={mode} showAlert={showAlert}/>} />
+          <Route path="/" element={<Textform heading="Textutis- word counter,character counter,remove extra spaces" mode={mode} showAlert={showAlert}/>} />
           <Route path="/about" element={<About mode={mode} />} />
           {/* <Route path="/home" element={<Home />} /> */}
         </Routes>
