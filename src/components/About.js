@@ -25,11 +25,9 @@ export default function About(props) {
            
   //       })
   //       setBtnText("Enable dark  mode")
-  //   }
-      
-
-        
+  //   }    
   //  }
+
   let myStyle={
     color: props.mode==='dark'?'white':'black',
     backgroundColor: props.mode==='dark'?'black':'white',
