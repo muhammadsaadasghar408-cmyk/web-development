@@ -39,7 +39,7 @@ export class News extends Component {
 
      handleprevclick=async ()=>{
        console.log("previous")
-       let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=businesscategory=${this.props.category}&apikey=8853cbd503014bacbcb2d732e7a43ebc&page=${this.state.page-1}&pagesize=${this.props.pagesize}`;
+       let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apikey=8853cbd503014bacbcb2d732e7a43ebc&page=${this.state.page-1}&pagesize=${this.props.pagesize}`;
        this.setState({loading:true});
       let data= await fetch(url);
       let parsedata= await data.json();
@@ -58,7 +58,7 @@ export class News extends Component {
     console.log("next")
     if (!(this.state.page+1 > Math.ceil((this.state.totalResults/this.props.pagesize))) ) {
      
-           let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=businesscategory=${this.props.category}&apikey=8853cbd503014bacbcb2d732e7a43ebc&page=${this.state.page+1}&pagesize=${this.props.pagesize}`;
+           let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apikey=8853cbd503014bacbcb2d732e7a43ebc&page=${this.state.page+1}&pagesize=${this.props.pagesize}`;
            this.setState({loading:true});
           let data= await fetch(url);
           let parsedata= await data.json();
@@ -76,7 +76,7 @@ export class News extends Component {
     console.log("render")
     return (
       <div className="container my-3">
-        <h1 className="text-center" style={{margin: '35px,10px'}}>News-Top Headline</h1>
+        <h1 className="text-center" style={{margin: '35px 10px'}}>News-Top Headline</h1>
         {this.state.loading&&<Spinner/>}
         <div className="row">
        {!this.state.loading&& this.state.articles.map((element)=> {
