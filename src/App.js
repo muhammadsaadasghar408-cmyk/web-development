@@ -12,7 +12,7 @@ export default class App extends Component {
       mode: 'light'   // dark ya light mode
     }
   }
-
+      
   toggleMode = () => {
     if (this.state.mode === 'light') {
       this.setState({ mode: 'dark' });
@@ -35,14 +35,14 @@ export default class App extends Component {
 
         <Routes>
         
-          <Route path="/" element={<News key="home" pagesize={6} category="general" />} />
-          <Route path="/business" element={<News key="business" pagesize={6} category="business" />} />
-          <Route path="/entertainment" element={<News key="entertainment" pagesize={6} category="entertainment" />} />
-          <Route path="/general" element={<News key="general" pagesize={6} category="general" />} />
-          <Route path="/health" element={<News key="health" pagesize={6} category="health" />} />
-          <Route path="/science" element={<News key="science" pagesize={6} category="science" />} />
-          <Route path="/sports" element={<News key="sports" pagesize={6} category="sports" />} />
-          <Route path="/technology" element={<News key="technology" pagesize={6} category="technology" />} />
+          <Route path="/" element={<News key="home" pageSize={this.pagSize} category="general" />} />
+          <Route path="/business" element={<News key="business" pageSize={this.pagSize} category="business" />} />
+          <Route path="/entertainment" element={<News key="entertainment" pageSize={this.pagSize} category="entertainment" />} />
+          <Route path="/general" element={<News key="general" pageSize={this.pagSize} category="general" />} />
+          <Route path="/health" element={<News key="health" pageSize={this.pagSize} category="health" />} />
+          <Route path="/science" element={<News key="science" pageSize={this.pagSize} category="science" />} />
+          <Route path="/sports" element={<News key="sports" pageSize={this.pagSize} category="sports" />} />
+          <Route path="/technology" element={<News key="technology" pageSize={this.pagSize} category="technology" />} />
 
         </Routes>
        </Router>
