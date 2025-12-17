@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
-export class Navbar extends Component {
+const Navbar =({mode,toggleMode })=>{
 
-  render() {
-    // props class component me this.props se milte hain
-    let { mode, toggleMode } = this.props;
+    
 
     return (
       <div>
-        <nav className={`navbar navbar-expand-lg navbar-${this.props.mode} bg-${this.props.mode}`}>
+        <nav className={`navbar fixed-top navbar-expand-lg navbar-${mode} bg-${mode}`}>
           <div className="container-fluid">
             <Link className="navbar-brand" to="/">Newshub</Link>
 
@@ -56,6 +54,6 @@ export class Navbar extends Component {
       </div>
     )
   }
-}
+
 
 export default Navbar
